@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 //eslint-disable-next-line
 import styled from "styled-components";
 import BodyContent from '@elements/Window/BodyContent';
+
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
 import axios from 'axios';
+
 import theme from '@styles/theme';
 
 const Wrapper = styled(SimpleBarReact)`

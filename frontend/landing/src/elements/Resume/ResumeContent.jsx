@@ -3,9 +3,10 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import BodyContent from '@elements/Window/BodyContent';
 
 import MyResume from './resume/MyResume.pdf';
+
+import BodyContent from '@elements/Window/BodyContent';
 
 const Iframe = styled.iframe`
 	width: 100%;

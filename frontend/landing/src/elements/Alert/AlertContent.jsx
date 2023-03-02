@@ -1,6 +1,7 @@
-import theme from '@styles/theme';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+
+import theme from '@styles/theme';
 import things from '@static/things.png';
 import DataContext from '@contexts/Data/DataContext';
 

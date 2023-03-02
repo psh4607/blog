@@ -31,7 +31,7 @@
           ["@utils", "./src/utils"],
           ["@/src", "./src"]
         ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx",".scss",".*"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx",".scss"]
       }
     },
     "react": {

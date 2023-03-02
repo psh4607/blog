@@ -1,13 +1,16 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import HeadingBar from '@elements/Window/HeadingBar';
+
 import Draggable from 'react-draggable';
+
+import { useLocation } from 'react-router-dom';
+
+import HeadingBar from '@elements/Window/HeadingBar';
 import bg from '@static/bg5small.jpg';
 import theme from '@styles/theme';
 import AlertContent from '@elements/Alert/AlertContent';
 import DockContent from '@elements/Dock/DockContent';
 import MenuContent from '@elements/Menu/MenuContent';
-import { useLocation } from 'react-router-dom';
 
 const Wrapper = styled.div`
 	display: grid;

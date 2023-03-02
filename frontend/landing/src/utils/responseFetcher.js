@@ -1,8 +1,12 @@
 import { useContext, useEffect } from 'react';
-import commands from '@utils/commands';
+
 import styled from 'styled-components';
-import theme from '@styles/theme';
+
 import { sanitize } from 'dompurify';
+
+import commands from '@utils/commands';
+import theme from '@styles/theme';
+
 import DataContext from '@contexts/Data/DataContext';
 
 // eslint-disable-next-line

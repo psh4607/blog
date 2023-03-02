@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 // eslint-disable-next-line
 import styled, { css, keyframes } from "styled-components";
+import { sanitize } from 'dompurify';
+
+import SimpleBarReact from 'simplebar-react';
+
 import DataContext from '@contexts/Data/DataContext';
 import theme from '@styles/theme';
 import getResponse from '@utils/responseFetcher';
-import { sanitize } from 'dompurify';
 import BodyContent from '@elements/Window/BodyContent';
-import SimpleBarReact from 'simplebar-react';
+
 import 'simplebar/src/simplebar.css';
 
 const Wrapper = styled(SimpleBarReact)`

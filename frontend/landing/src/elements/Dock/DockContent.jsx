@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
+
 import '@styles/dock.scss';
+import { Link } from 'react-router-dom';
+
 import FinderIcon from '@static/finder.png';
 import CodeIcon from '@static/code.png';
 import GithubIcon from '@static/github.png';
@@ -8,7 +11,6 @@ import twitterIcon from '@static/twitterIcon.png';
 import FolderIcon from '@static/folder.png';
 import LinkedInIcon from '@static/LinkedInIcon.png';
 import NothingIcon from '@static/NothingIcon.png';
-import { Link } from 'react-router-dom';
 import DevopsIcon from '@static/DevopsIcon.png';
 import mIcon from '@static/mIcon.jpg';
 // import MyResume from "../Resume/resume/MyResume.pdf"

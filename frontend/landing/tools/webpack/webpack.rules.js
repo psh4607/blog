@@ -87,4 +87,8 @@ module.exports = [
 			},
 		},
 	},
+	{
+		test: /\.(txt|pdf)$/,
+		use: 'raw-loader',
+	},
 ];

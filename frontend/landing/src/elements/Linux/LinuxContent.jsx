@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { V86Starter } from 'v86';
 import { v86WASM, seabios, vgabios } from 'v86/build/binaries';
+
 import cursorIcon from '@static/cursor.svg';
 
 const Arch = () => {
