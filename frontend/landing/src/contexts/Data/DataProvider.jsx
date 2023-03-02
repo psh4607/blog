@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
-import DataContext from "../Data/DataContext";
-import { initialState } from "../Data/initialState";
-import { reducer } from "../Data/reducer";
+import DataContext from "./DataContext";
+import { initialState } from "./initialState";
+import { reducer } from "./reducer";
 const DataProvider = props => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 

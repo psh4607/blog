@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ReactGA from "react-ga";
-import "./styles/index.scss";
+import "@styles/index.scss";
 import App from "./App";
 // eslint-disable-next-line no-unused-vars
 import {  HashRouter as Router } from "react-router-dom"
 
-// ReactDOM.render((<Router><App/></Router>), 
+// ReactDOM.render((<Router><App/></Router>),
 // document.getElementById('root'));
 
 // ReactDOM.render(

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { initialState } from "../Data/initialState";
+import { initialState } from "./initialState";
 
 const DataContext = createContext(initialState);
 

@@ -1,5 +1,5 @@
 import Color from "color";
-import colors from "../styles/colors";
+import colors from "./colors";
 
 const aliases = {
 	fade: ["clearer"],

@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
-import Loader from "../elements/Loader/Loader";
-import Default from "../components/Default";
+import Loader from "@elements/Loader/Loader";
+import Default from "./Default";
 
 const Zone = lazy(() => import("@elements/Danger/Zone"));
 

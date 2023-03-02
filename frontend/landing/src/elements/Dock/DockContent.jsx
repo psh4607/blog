@@ -70,7 +70,7 @@ const DockContent = () => {
 									/>
 								</li>
 							</a>
-							<a href="https://minimalinfo.vercel.app/" target="_blank">
+							<a href="@elements/Dock/DockContent" target="_blank">
 								<li data-title="Minimal Info">
 									<img
 										src
