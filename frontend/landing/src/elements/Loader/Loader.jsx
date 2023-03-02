@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import theme from "@styles/theme";
-import "@styles/loader.scss";
+import React from 'react';
+import styled from 'styled-components';
+import theme from '@styles/theme';
+import '@styles/loader.scss';
 
 const LoadingContainer = styled.div`
 	width: 100%;
@@ -12,19 +12,19 @@ const LoadingContainer = styled.div`
 const Loader = () => {
 	return (
 		<LoadingContainer>
-			<div className="spinner center">
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
-				<div className="spinner-blade"></div>
+			<div className='spinner center'>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
+				<div className='spinner-blade'></div>
 			</div>
 		</LoadingContainer>
 	);

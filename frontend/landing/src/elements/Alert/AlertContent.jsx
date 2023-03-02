@@ -1,8 +1,8 @@
-import theme from "@styles/theme";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import things from "@static/things.png";
-import DataContext from "@contexts/Data/DataContext";
+import theme from '@styles/theme';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import things from '@static/things.png';
+import DataContext from '@contexts/Data/DataContext';
 
 const Wrapper = styled.div`
 	position: absolute;
@@ -22,8 +22,8 @@ const Container = styled.div`
 	border-radius: 1rem;
 	box-shadow: rgba(14, 30, 37, 0.2) 0px 0px 10px 0px,
 		inset rgba(207, 229, 255, 0.2) 1px 1px 5px 0px;
-	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-		Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, 'Helvetica Neue', Arial, sans-serif;
 	right: -30rem;
 	cursor: default;
 	transition: right 0.7s cubic-bezier(0.64, -0.5, 0.16, 1);
@@ -58,7 +58,7 @@ const Close = styled.div`
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	&:after {
-		content: "\\00d7";
+		content: '\\00d7';
 		height: 100%;
 		width: 100%;
 		display: flex;
@@ -84,7 +84,7 @@ const Header = styled.div`
 const Icon = styled.div`
 	height: 1.5rem;
 	width: 1.5rem;
-	background: url("${props => props.image && props.image}") no-repeat;
+	background: url('${props => props.image && props.image}') no-repeat;
 	background-size: contain;
 `;
 
@@ -105,24 +105,26 @@ const ContentBody = styled.div`
 `;
 
 const AlertContent = ({ type }) => {
-	const [textContent, setTextContent] = useState("");
-	const [time, setTime] = useState("now");
+	const [textContent, setTextContent] = useState('');
+	const [time, setTime] = useState('now');
 	const { alertHidden, setAlertHidden } = useContext(DataContext);
 	const [source, setSource] = useState(null);
 	const closeRef = useRef();
 	const containerRef = useRef();
 	useEffect(() => {
 		switch (type) {
-			case "hideHelp":
-				setTextContent("Type help to get started & act like you're in a terminal!");
-				break;
-			case "qemu":
+			case 'hideHelp':
 				setTextContent(
-					"This page is still under development! You might experience visual glitches, ROM issues, etc. On top of that, since it downloads a 16.8 mb OS image, it might take a while to work properly. In such circumstances, try refreshing the page. If you're still having issues, please open an issue on GitHub."
+					'Type help to get started & act like you\'re in a terminal!',
+				);
+				break;
+			case 'qemu':
+				setTextContent(
+					"This page is still under development! You might experience visual glitches, ROM issues, etc. On top of that, since it downloads a 16.8 mb OS image, it might take a while to work properly. In such circumstances, try refreshing the page. If you're still having issues, please open an issue on GitHub.",
 				);
 				break;
 			default:
-				setTextContent("Cannot load alert message!");
+				setTextContent('Cannot load alert message!');
 				break;
 		}
 
@@ -133,7 +135,7 @@ const AlertContent = ({ type }) => {
 	}, []);
 	useEffect(() => {
 		if (alertHidden) {
-			containerRef.current.classList.remove("showAlert");
+			containerRef.current.classList.remove('showAlert');
 			localStorage.setItem(`alert__${type}`, true);
 		}
 		//eslint-disable-next-line
@@ -141,7 +143,7 @@ const AlertContent = ({ type }) => {
 	useEffect(() => {
 		let help = localStorage.getItem(`alert__${type}`);
 		if (!help && source && !alertHidden) {
-			containerRef.current.classList.add("showAlert");
+			containerRef.current.classList.add('showAlert');
 		}
 		//eslint-disable-next-line
 	}, [source]);
@@ -155,9 +157,9 @@ const AlertContent = ({ type }) => {
 				setTime(`${timeSpentMin}m ago`);
 			}
 			if (timeSpentSec % shakeInterval === 0) {
-				containerRef.current.classList.add("shake");
+				containerRef.current.classList.add('shake');
 				setTimeout(() => {
-					containerRef.current?.classList.remove("shake");
+					containerRef.current?.classList.remove('shake');
 				}, 5000);
 			}
 		}, 1000);
@@ -170,16 +172,16 @@ const AlertContent = ({ type }) => {
 			<Container
 				ref={containerRef}
 				onMouseOver={() => {
-					closeRef.current.classList.remove("hidden");
-					closeRef.current.classList.add("shown");
+					closeRef.current.classList.remove('hidden');
+					closeRef.current.classList.add('shown');
 				}}
 				onMouseOut={() => {
-					closeRef.current.classList.add("hidden");
-					closeRef.current.classList.remove("shown");
+					closeRef.current.classList.add('hidden');
+					closeRef.current.classList.remove('shown');
 				}}
 			>
 				<Close
-					className="hidden"
+					className='hidden'
 					ref={closeRef}
 					onClick={() => {
 						setAlertHidden(true);

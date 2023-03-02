@@ -1,11 +1,18 @@
-import React, { Suspense, lazy } from "react";
-import Default from "./Default";
-import Loader from "@elements/Loader/Loader";
-const GitContent = lazy(() => import("@elements/Git/GitContent"));
+import React, { Suspense, lazy } from 'react';
+
+import Loader from '@elements/Loader/Loader';
+
+import Default from './Default';
+const GitContent = lazy(() => import('@elements/Git/GitContent'));
 
 const Resume = () => {
 	return (
-		<Default heading="git log" contextMenu={true} resizable={false}  programName="Git Log">
+		<Default
+			heading='git log'
+			contextMenu={true}
+			resizable={false}
+			programName='Git Log'
+		>
 			<Suspense fallback={<Loader />}>
 				<GitContent />
 			</Suspense>

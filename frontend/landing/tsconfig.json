@@ -26,16 +26,14 @@
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/*": ["components/*"],
-      "@contexts/*": ["contexts/*"],
-      "@elements/*": ["elements/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"],
-      "@static/*": ["static/*"],
-      "@pages/*": ["pages/*"]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@elements/*": ["src/elements/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
+      "@static/*": ["src/static/*"],
+      "@pages/*": ["src/pages/*"]
     }
   },
   "typeRoots": ["./node_modules/@types", "./types"],

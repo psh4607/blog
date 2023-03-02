@@ -15,7 +15,6 @@
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["license-header"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -23,10 +22,16 @@
       },
       "alias": {
         "map": [
-          ["@/src", "./src"],
-          ["@/assets", "./assets"]
+          ["@components", "./src/components"],
+          ["@contexts", "./src/contexts"],
+          ["@elements", "./src/elements"],
+          ["@styles", "./src/styles"],
+          ["@static", "./src/static"],
+          ["@pages", "./src/pages"],
+          ["@utils", "./src/utils"],
+          ["@/src", "./src"]
         ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx",".scss",".*"]
       }
     },
     "react": {
@@ -86,7 +91,6 @@
         "varsIgnorePattern": "^_"
       }
     ],
-    "license-header/header": ["error", "./resources/license-header.ts"],
     "import/order": [
       "error",
       { "newlines-between": "always-and-inside-groups" }

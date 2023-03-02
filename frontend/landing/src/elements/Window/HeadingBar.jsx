@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 // eslint-disable-next-line
 import styled from "styled-components";
-import theme from "@styles/theme";
-import icon from "@static/home.png";
-import { useHistory } from "react-router-dom";
+import theme from '@styles/theme';
+import icon from '@static/home.png';
+import { useHistory } from 'react-router-dom';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -43,7 +43,7 @@ const StyledDot = styled.div`
 	margin: 0 0 0 0.75rem;
 	cursor: pointer;
 	&:after {
-		content: "";
+		content: '';
 		height: 0.3rem;
 		width: 0.3rem;
 		background: transparent;
@@ -95,14 +95,14 @@ const HeadingBar = props => {
 		<Wrapper className={props.altClassName}>
 			<DotContainer>
 				<Dot
-					variant="1"
+					variant='1'
 					onClick={() => {
 						history.goBack();
 					}}
 				/>
-				<Dot variant="2" />
+				<Dot variant='2' />
 				<Dot
-					variant="3"
+					variant='3'
 					onClick={() => {
 						history.goForward();
 					}}
@@ -110,7 +110,7 @@ const HeadingBar = props => {
 			</DotContainer>
 			<TitleContainer>
 				<Title>
-					<Icon src={icon} alt="home icon" /> {props.heading}
+					<Icon src={icon} alt='home icon' /> {props.heading}
 				</Title>
 			</TitleContainer>
 		</Wrapper>

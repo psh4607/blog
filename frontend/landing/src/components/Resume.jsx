@@ -1,11 +1,18 @@
-import React, { Suspense, lazy } from "react";
-import Default from "./Default";
-import Loader from "@elements/Loader/Loader";
-const ResumeContent = lazy(() => import("@elements/Resume/ResumeContent"));
+import React, { Suspense, lazy } from 'react';
+
+import Loader from '@elements/Loader/Loader';
+
+import Default from './Default';
+const ResumeContent = lazy(() => import('@elements/Resume/ResumeContent'));
 
 const Resume = () => {
 	return (
-		<Default height="90%" heading="Resume" resizable={false} programName="Resume">
+		<Default
+			height='90%'
+			heading='Resume'
+			resizable={false}
+			programName='Resume'
+		>
 			<Suspense fallback={<Loader />}>
 				<ResumeContent />
 			</Suspense>

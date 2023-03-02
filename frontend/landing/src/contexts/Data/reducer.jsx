@@ -1,18 +1,18 @@
 export const reducer = (state, action) => {
 	switch (action.type) {
-		case "SET":
+		case 'SET':
 			let commands = state.commands;
 			commands.push(action.payload);
 			return {
 				...state,
 				commands: commands,
 			};
-		case "PATH":
+		case 'PATH':
 			return {
 				...state,
 				path: action.payload,
 			};
-		case "ALERT":
+		case 'ALERT':
 			return {
 				...state,
 				alert: action.payload,

@@ -1,8 +1,10 @@
-import React, { Suspense, lazy } from "react";
-import Default from "./Default";
-import Loader from "@elements/Loader/Loader";
+import React, { Suspense, lazy } from 'react';
+
+import Loader from '@elements/Loader/Loader';
+
+import Default from './Default';
 const TerminalContent = lazy(() =>
-	import("@elements/Terminal/TerminalContent")
+	import('@elements/Terminal/TerminalContent'),
 );
 
 const VSCode = () => {
@@ -10,7 +12,7 @@ const VSCode = () => {
 		<Default
 			contextMenu={true}
 			heading="aditya@portfolio: type 'help' for more info"
-		    programName="Terminal"
+			programName='Terminal'
 		>
 			<Suspense fallback={<Loader />}>
 				{/* <Loader/> */}

@@ -1,12 +1,16 @@
-import React, { Suspense, lazy } from "react";
-import Loader from "@elements/Loader/Loader";
-import Default from "./Default";
+import React, { Suspense, lazy } from 'react';
+import Loader from '@elements/Loader/Loader';
 
-const Zone = lazy(() => import("@elements/Danger/Zone"));
+import Default from './Default';
+
+const Zone = lazy(() => import('@elements/Danger/Zone'));
 
 const VSCode = () => {
 	return (
-		<Default heading="Avicii - The Nights (Official Music Video)" programName="YouTube">
+		<Default
+			heading='Avicii - The Nights (Official Music Video)'
+			programName='YouTube'
+		>
 			<Suspense fallback={<Loader />}>
 				<Zone />
 			</Suspense>

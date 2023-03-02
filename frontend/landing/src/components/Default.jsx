@@ -1,14 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import HeadingBar from "@elements/Window/HeadingBar";
-import Draggable from "react-draggable";
-import bg from "@static/bg5small.jpg";
-import theme from "@styles/theme";
-import AlertContent from "@elements/Alert/AlertContent";
-import DockContent from "@elements/Dock/DockContent";
-import MenuContent from "@elements/Menu/MenuContent";
-import { css } from "styled-components";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import styled, { css } from 'styled-components';
+import HeadingBar from '@elements/Window/HeadingBar';
+import Draggable from 'react-draggable';
+import bg from '@static/bg5small.jpg';
+import theme from '@styles/theme';
+import AlertContent from '@elements/Alert/AlertContent';
+import DockContent from '@elements/Dock/DockContent';
+import MenuContent from '@elements/Menu/MenuContent';
+import { useLocation } from 'react-router-dom';
 
 const Wrapper = styled.div`
 	display: grid;
@@ -58,7 +57,7 @@ const Default = props => {
 		<>
 			<MenuContent programName={props.programName} />
 			<AlertContent
-				type={pathname.includes("qemu") ? `qemu` : `hideHelp`}
+				type={pathname.includes('qemu') ? `qemu` : `hideHelp`}
 			/>
 			<Wrapper>
 				<Draggable
@@ -68,18 +67,18 @@ const Default = props => {
 						right: BOUND,
 						bottom: BOUND,
 					}}
-					handle=".heading-bar"
+					handle='.heading-bar'
 				>
 					<Container
 						height={props.height}
 						resizable={resizable}
-						isEmulator={props.heading === "qemu"}
+						isEmulator={props.heading === 'qemu'}
 						onContextMenu={e => {
 							!props.contextMenu && e.preventDefault();
 						}}
 					>
 						<HeadingBar
-							altClassName="heading-bar"
+							altClassName='heading-bar'
 							heading={props.heading}
 						/>
 						{props.children}

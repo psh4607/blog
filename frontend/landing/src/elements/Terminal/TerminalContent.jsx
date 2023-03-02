@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from 'react';
 // eslint-disable-next-line
 import styled, { css, keyframes } from "styled-components";
-import DataContext from "@contexts/Data/DataContext";
-import theme from "@styles/theme";
-import getResponse from "@utils/responseFetcher";
-import { sanitize } from "dompurify";
-import BodyContent from "@elements/Window/BodyContent";
-import SimpleBarReact from "simplebar-react";
-import "simplebar/src/simplebar.css";
+import DataContext from '@contexts/Data/DataContext';
+import theme from '@styles/theme';
+import getResponse from '@utils/responseFetcher';
+import { sanitize } from 'dompurify';
+import BodyContent from '@elements/Window/BodyContent';
+import SimpleBarReact from 'simplebar-react';
+import 'simplebar/src/simplebar.css';
 
 const Wrapper = styled(SimpleBarReact)`
-	font-family: "Hack", monospace;
+	font-family: 'Hack', monospace;
 	color: ${theme.bodyFont1};
 	.simplebar-scrollbar:before {
 		border-radius: 10px;
@@ -96,7 +96,7 @@ const Label = styled.label`
 `;
 
 const InputLine = props => {
-	const [val, setVal] = useState("");
+	const [val, setVal] = useState('');
 	const { commands, setCommand, path } = useContext(DataContext);
 	const [counter, setCounter] = useState(commands.length);
 	const [typing, setTyping] = useState(false);
@@ -104,14 +104,14 @@ const InputLine = props => {
 	const [disabled, setDisabled] = useState(false);
 	const inputRef = useRef();
 	const cursorRef = useRef();
-	let alertHidden = localStorage.getItem("hideHelp");
+	let alertHidden = localStorage.getItem('hideHelp');
 	useEffect(() => {
 		if (!disabled) {
 			inputRef.current.focus();
-			inputRef.current.addEventListener("select", e => {
+			inputRef.current.addEventListener('select', e => {
 				e.target.selectionStart = e.target.selectionEnd;
 			});
-			inputRef.current.addEventListener("mousedown", e => {
+			inputRef.current.addEventListener('mousedown', e => {
 				e.preventDefault();
 			});
 		}
@@ -125,9 +125,9 @@ const InputLine = props => {
 				let timeSpentSec = Math.floor((new Date() - startTime) / 1000);
 				let timeSpentMin = Math.floor(timeSpentSec / 60);
 				if (timeSpentMin === 5 && !disabled) {
-					setVal("help");
+					setVal('help');
 					inputRef.current.style.width =
-						inputRef.current.value.length + "ch";
+						inputRef.current.value.length + 'ch';
 				}
 			}, 1000);
 			return () => {
@@ -144,14 +144,14 @@ const InputLine = props => {
 	return (
 		<InputContainer>
 			<Label
-				htmlFor="input"
+				htmlFor='input'
 				dangerouslySetInnerHTML={{
 					__html: sanitize(path),
 				}}
 			/>
 			<Input
-				id="input"
-				type="text"
+				id='input'
+				type='text'
 				ref={inputRef}
 				value={val}
 				onBlur={e => {
@@ -165,12 +165,12 @@ const InputLine = props => {
 						ctrlCheck = true;
 					}
 					let currentPos = parseFloat(
-						cursorRef.current.style.transform.slice(11)
+						cursorRef.current.style.transform.slice(11),
 					);
 					let textLength = inputRef.current.value.length;
 					let checkPos = Math.abs(Math.floor(currentPos));
 					switch (e.key) {
-						case "ArrowLeft":
+						case 'ArrowLeft':
 							if (checkPos <= textLength && !ctrlCheck) {
 								setTyping(true);
 								cursorRef.current.style.transform = `translateX(${
@@ -180,7 +180,7 @@ const InputLine = props => {
 								e.preventDefault();
 							}
 							break;
-						case "Delete":
+						case 'Delete':
 							if (checkPos !== 1 && !ctrlCheck) {
 								cursorRef.current.style.transform = `translateX(${
 									currentPos + 1
@@ -189,7 +189,7 @@ const InputLine = props => {
 								e.preventDefault();
 							}
 							break;
-						case "Home":
+						case 'Home':
 							if (checkPos <= textLength) {
 								cursorRef.current.style.transform = `translateX(${
 									-textLength - 0.5
@@ -198,14 +198,14 @@ const InputLine = props => {
 								e.preventDefault();
 							}
 							break;
-						case "End":
+						case 'End':
 							if (checkPos !== 1) {
 								cursorRef.current.style.transform = `translateX(-0.5ch)`;
 							} else {
 								e.preventDefault();
 							}
 							break;
-						case "ArrowRight":
+						case 'ArrowRight':
 							if (checkPos !== 1 && !ctrlCheck) {
 								setTyping(true);
 								cursorRef.current.style.transform = `translateX(${
@@ -215,37 +215,37 @@ const InputLine = props => {
 								e.preventDefault();
 							}
 							break;
-						case "ArrowUp":
+						case 'ArrowUp':
 							if (counter > 0) {
 								setCounter(counter - 1);
 								let currentCommand = commands[counter - 1];
 								setVal(currentCommand);
 								e.target.style.width =
-									currentCommand.length + "ch";
+									currentCommand.length + 'ch';
 								cursorRef.current.style.transform = `translateX(${
 									-currentCommand.length - 0.5
 								}ch)`;
 							}
 							break;
-						case "ArrowDown":
+						case 'ArrowDown':
 							if (counter <= commands.length - 1) {
 								if (counter === commands.length - 1) {
-									setVal("");
-									e.target.style.width = "0ch";
+									setVal('');
+									e.target.style.width = '0ch';
 									cursorRef.current.style.transform = `translateX(-0.5ch)`;
 								} else {
 									setCounter(counter + 1);
 									let currentCommand = commands[counter + 1];
 									setVal(currentCommand);
 									e.target.style.width =
-										currentCommand.length + "ch";
+										currentCommand.length + 'ch';
 									cursorRef.current.style.transform = `translateX(${
 										-currentCommand.length - 0.5
 									}ch)`;
 								}
 							}
 							break;
-						case "Enter":
+						case 'Enter':
 							setDisabled(true);
 							props.setData(val);
 							props.setChild(props.child + 1);
@@ -261,19 +261,19 @@ const InputLine = props => {
 					if (e.target.value.length <= 100) {
 						setVal(e.target.value.toLowerCase());
 						setTyping(true);
-						e.target.style.width = e.target.value.length + "ch";
+						e.target.style.width = e.target.value.length + 'ch';
 					}
 				}}
 				spellCheck={false}
-				autoComplete="off"
-				autoCorrect="off"
+				autoComplete='off'
+				autoCorrect='off'
 			/>
 			<Cursor
 				ref={cursorRef}
 				typing={typing}
 				disabled={disabled}
 				style={{
-					transform: "translateX(-0.5ch)",
+					transform: 'translateX(-0.5ch)',
 				}}
 			/>
 		</InputContainer>
@@ -285,11 +285,11 @@ const Response = props => {
 };
 
 const Command = props => {
-	const [response, setResponse] = useState("");
-	const [data, setData] = useState("");
+	const [response, setResponse] = useState('');
+	const [data, setData] = useState('');
 	useEffect(() => {
 		if (data.length) {
-			if (data.trim().toLowerCase() === "clear") {
+			if (data.trim().toLowerCase() === 'clear') {
 				props.setActive(false);
 				props.setChild(1);
 			}

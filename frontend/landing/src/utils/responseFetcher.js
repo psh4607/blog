@@ -1,9 +1,9 @@
-import { useContext, useEffect } from "react";
-import commands from "@utils/commands";
-import styled from "styled-components";
-import theme from "@styles/theme";
-import { sanitize } from "dompurify";
-import DataContext from "@contexts/Data/DataContext";
+import { useContext, useEffect } from 'react';
+import commands from '@utils/commands';
+import styled from 'styled-components';
+import theme from '@styles/theme';
+import { sanitize } from 'dompurify';
+import DataContext from '@contexts/Data/DataContext';
 
 // eslint-disable-next-line
 const Wrapper = styled.span`
@@ -54,8 +54,8 @@ const Wrapper = styled.span`
 const getErrorCommand = command => {
 	return (
 		<Wrapper>
-			zsh: command not found:{" "}
-			<span className="style2">{sanitize(command)}</span>
+			zsh: command not found:{' '}
+			<span className='style2'>{sanitize(command)}</span>
 		</Wrapper>
 	);
 };
@@ -65,28 +65,28 @@ const Action = props => {
 	useEffect(() => {
 		if (props.action) {
 			switch (Object.keys(props.action)[0]) {
-				case "PATH":
+				case 'PATH':
 					window.open(props.action.PATH);
 					break;
-				case "CODE":
-					document.location.href = "/vscode";
+				case 'CODE':
+					document.location.href = '/vscode';
 					break;
-				case "DANGER":
-					document.location.href = "/danger-zone";
+				case 'DANGER':
+					document.location.href = '/danger-zone';
 					break;
-				case "QEMU":
-					document.location.href = "/qemu";
+				case 'QEMU':
+					document.location.href = '/qemu';
 					break;
-				case "RESUME":
-					document.location.href = "/resume";
+				case 'RESUME':
+					document.location.href = '/resume';
 					break;
-				case "PROJECTS":
-					document.location.href = "/projects";
+				case 'PROJECTS':
+					document.location.href = '/projects';
 					break;
-				case "GIT":
-					document.location.href = "/git";
+				case 'GIT':
+					document.location.href = '/git';
 					break;
-				case "HELP":
+				case 'HELP':
 					setAlertHidden(true);
 					break;
 				default:
@@ -107,7 +107,7 @@ const parseResponse = (command, { data }) => {
 				dangerouslySetInnerHTML={{
 					__html: response.replace(
 						/%arg%/g,
-						`<span class="style2">${sanitize(data)}</span>`
+						`<span class="style2">${sanitize(data)}</span>`,
 					),
 				}}
 			/>
@@ -116,23 +116,23 @@ const parseResponse = (command, { data }) => {
 };
 
 const getResponse = data => {
-	let commandWithArgs = data.split(" ");
+	let commandWithArgs = data.split(' ');
 	if (commands.hasOwnProperty(commandWithArgs[0])) {
-		let arg = "";
-		let originalArg = "";
+		let arg = '';
+		let originalArg = '';
 		if (commandWithArgs.length === 1) {
-			arg = "_dir";
+			arg = '_dir';
 		} else if (
 			commands[commandWithArgs[0]].validArgs.hasOwnProperty(
-				commandWithArgs[1]
+				commandWithArgs[1],
 			)
 		) {
 			arg = commandWithArgs[1];
 		} else {
-			arg = "default";
+			arg = 'default';
 		}
 		originalArg = arg;
-		if (arg === "default") {
+		if (arg === 'default') {
 			originalArg = commandWithArgs[1];
 		}
 		return parseResponse(commands[commandWithArgs[0]].validArgs[arg], {

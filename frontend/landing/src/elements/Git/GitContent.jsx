@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 //eslint-disable-next-line
 import styled from "styled-components";
-import BodyContent from "@elements/Window/BodyContent";
-import SimpleBarReact from "simplebar-react";
-import "simplebar/src/simplebar.css";
-import axios from "axios";
-import theme from "@styles/theme";
+import BodyContent from '@elements/Window/BodyContent';
+import SimpleBarReact from 'simplebar-react';
+import 'simplebar/src/simplebar.css';
+import axios from 'axios';
+import theme from '@styles/theme';
 
 const Wrapper = styled(SimpleBarReact)`
-	font-family: "Hack", monospace;
+	font-family: 'Hack', monospace;
 	.simplebar-scrollbar:before {
 		border-radius: 10px;
 		background-color: ${theme.scrollbarThumb};
@@ -64,14 +64,14 @@ const Wrapper = styled(SimpleBarReact)`
 `;
 
 const getSpaces = commandList => {
-	let defaultSpaces = "\t";
+	let defaultSpaces = '\t';
 	let lengthList = commandList.map(item => {
 		return item.name.length;
 	});
 	// console.log(commandList)
 	let max = Math.max(...lengthList);
 	return commandList.map(item => {
-		return Array(max - item.name.length + 1).join(" ") + defaultSpaces;
+		return Array(max - item.name.length + 1).join(' ') + defaultSpaces;
 	});
 };
 
@@ -79,26 +79,28 @@ const GitContent = () => {
 	const [data, setData] = useState();
 	useEffect(() => {
 		axios
-			.get("https://api.github.com/users/adityassharma-ss/repos?per_page=100")
+			.get(
+				'https://api.github.com/users/adityassharma-ss/repos?per_page=100',
+			)
 			.then(res => {
 				let data = res.data.sort((a, b) => {
 					let x = a.stargazers_count;
 					let y = b.stargazers_count;
 					return x > y ? -1 : x < y ? 1 : 0;
 				});
-				let response = "";
+				let response = '';
 				let base = [
 					{
-						name: "Name",
-						description: "Description",
-						url: "Url",
-						stars: "Stars",
+						name: 'Name',
+						description: 'Description',
+						url: 'Url',
+						stars: 'Stars',
 					},
 					{
-						name: "",
-						description: "",
-						url: "",
-						stars: "",
+						name: '',
+						description: '',
+						url: '',
+						stars: '',
 					},
 				];
 				let mappedData = [
@@ -121,9 +123,9 @@ const GitContent = () => {
 					}</a></span>${spaceList[idx]}<span class="${
 						idx !== 0 && `style5`
 					}">${
-						item.stars === 0 ? "-" : item.stars
+						item.stars === 0 ? '-' : item.stars
 					}</span>\t<span class="${idx !== 0 && `style4`}">${
-						item.description ? item.description : ""
+						item.description ? item.description : ''
 					}</span>\n`;
 				});
 				setData(response);

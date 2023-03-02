@@ -8,13 +8,12 @@ const { createWebpackAliases } = require('./webpack.helpers');
  * to match the `paths` we are using in here for aliases in project.
  */
 module.exports = createWebpackAliases({
-  '@/assets': 'assets',
-  '@/src': 'src',
-  "@components/*": "src/components/*",
-  "@contexts/*": "src/contexts/*",
-  "@elements/*": "src/elements/*",
-  "@styles/*": "src/styles/*",
-  "@utils/*": "src/utils/*",
-  "@static/*": "src/static/*",
-  "@pages/*": "src/pages/*"
+	'@components': 'src/components',
+	'@contexts': 'src/contexts',
+	'@elements': 'src/elements',
+	'@styles': 'src/styles',
+	'@utils': 'src/utils',
+	'@static': 'src/static',
+	'@pages': 'src/pages',
+	'@': 'src',
 });

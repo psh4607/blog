@@ -11,7 +11,8 @@
 		"deploy": "gh-pages -d build",
 		"test": "craco test",
 		"eject": "react-scripts eject",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx src/"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -52,9 +53,11 @@
 	"devDependencies": {
 		"@babel/core": "^7.21.0",
 		"@craco/craco": "^7.0.0",
+		"@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^14.0.0",
 		"@testing-library/user-event": "^14.4.3",
+		"@types/color": "^3.0.3",
 		"@typescript-eslint/eslint-plugin": "^5.54.0",
 		"@typescript-eslint/parser": "^5.54.0",
 		"babel": "^6.23.0",
@@ -67,14 +70,16 @@
 		"eslint-config-react-app": "^7.0.1",
 		"eslint-import-resolver-alias": "^1.1.2",
 		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-license-header": "^0.6.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-webpack-plugin": "^4.0.0",
+		"fork-ts-checker-webpack-plugin": "^7.3.0",
 		"gh-pages": "^4.0.0",
 		"html-loader": "^4.2.0",
 		"html-webpack-plugin": "^5.5.0",
 		"husky": "^8.0.3",
+		"mini-css-extract-plugin": "^2.7.2",
 		"prettier": "^2.8.4",
 		"react-error-overlay": "^6.0.9",
 		"serve": "^14.2.0",
