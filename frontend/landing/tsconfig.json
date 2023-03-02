@@ -28,7 +28,14 @@
     "paths": {
       "@/*": [
         "src/*"
-      ] // alias
+      ],
+      "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
+      "@elements/*": ["elements/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@static/*": ["static/*"],
+      "@pages/*": ["pages/*"]
     }
   },
   "typeRoots": ["./node_modules/@types", "./types"],

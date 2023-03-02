@@ -10,4 +10,11 @@ const { createWebpackAliases } = require('./webpack.helpers');
 module.exports = createWebpackAliases({
   '@/assets': 'assets',
   '@/src': 'src',
+  "@components/*": "src/components/*",
+  "@contexts/*": "src/contexts/*",
+  "@elements/*": "src/elements/*",
+  "@styles/*": "src/styles/*",
+  "@utils/*": "src/utils/*",
+  "@static/*": "src/static/*",
+  "@pages/*": "src/pages/*"
 });
