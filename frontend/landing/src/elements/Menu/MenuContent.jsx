@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '@styles/menubar.scss';
 import AppleIcon from '@static/apple.png';
 import BatteryIcon from '@static/battery.png';
@@ -36,46 +38,56 @@ const convertToReadableDate = timestamp => {
 	];
 	const currentDate = new Date(timestamp);
 	return (
-		<>
+		<React.Fragment>
 			{shortenedDaysOfTheWeek[currentDate.getDay()]}{' '}
 			{currentDate.getDate()} {shortenedMonth[currentDate.getMonth()]}{' '}
 			<span className='time'>
 				{currentDate.getHours()}:
 				{formatMinutes(currentDate.getMinutes())}
 			</span>
-		</>
+		</React.Fragment>
 	);
 };
 
 const MenuContent = props => {
-	const menuItems = [
-		[
-			<img src={AppleIcon} alt='Apple logo' className='apple' />,
-			props.programName,
-			'File',
-			'Edit',
-			'View',
-			'Chat',
-			'Window',
-			'Help',
-		],
-		[
-			// <img src={IcloudIcon} alt="Cloud icon" className="right-icon" />,
-			<img src={BatteryIcon} alt='Battery icon' className='right-icon' />,
-			<img src={WifiIcon} alt='Wifi icon' className='right-icon' />,
-			<img
-				src={ControlCenterIcon}
-				alt='Control Center icon'
-				className='right-icon'
-			/>,
-			<img src={NotifyIcon} alt='Notify icon' className='right-icon' />,
-			convertToReadableDate(Date.now()),
-		],
+	const leftMenuItems = [
+		<img src={AppleIcon} alt='Apple logo' className='apple' key={0} />,
+		props.programName,
+		'File',
+		'Edit',
+		'View',
+		'Chat',
+		'Window',
+		'Help',
 	];
+	const rightMenuItems = [
+		// <img src={IcloudIcon} alt="Cloud icon" className="right-icon" />,
+		<img
+			key={0}
+			src={BatteryIcon}
+			alt='Battery icon'
+			className='right-icon'
+		/>,
+		<img key={1} src={WifiIcon} alt='Wifi icon' className='right-icon' />,
+		<img
+			key={2}
+			src={ControlCenterIcon}
+			alt='Control Center icon'
+			className='right-icon'
+		/>,
+		<img
+			key={3}
+			src={NotifyIcon}
+			alt='Notify icon'
+			className='right-icon'
+		/>,
+		convertToReadableDate(Date.now()),
+	];
+
 	return (
 		<div className='menu-bar'>
 			<div className='app-menus'>
-				{menuItems[0].map((item, index) => {
+				{leftMenuItems.map((item, index) => {
 					return (
 						<div
 							className={`${
@@ -89,11 +101,11 @@ const MenuContent = props => {
 				})}
 			</div>
 			<div className='right-side'>
-				{menuItems[1].map((item, index) => {
+				{rightMenuItems.map((item, index) => {
 					return (
 						<div
 							className={`${
-								index !== menuItems[1].length - 1
+								index !== rightMenuItems.length - 1
 									? `img-container`
 									: ``
 							}`}

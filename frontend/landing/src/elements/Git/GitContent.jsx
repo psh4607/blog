@@ -1,50 +1,59 @@
 import React, { useEffect, useState } from 'react';
-//eslint-disable-next-line
-import styled from "styled-components";
-import BodyContent from '@elements/Window/BodyContent';
+import styled from 'styled-components';
 
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
 import axios from 'axios';
 
 import theme from '@styles/theme';
+import BodyContent from '@elements/Window/BodyContent';
 
 const Wrapper = styled(SimpleBarReact)`
 	font-family: 'Hack', monospace;
+
 	.simplebar-scrollbar:before {
 		border-radius: 10px;
 		background-color: ${theme.scrollbarThumb};
 	}
+
 	overflow: auto;
 	color: ${theme.bodyFont1};
 	height: 100%;
 	width: 100%;
 	padding: 1rem;
 	max-height: 80vh;
+
 	a {
 		color: inherit;
 		background: inherit;
 		text-decoration: none;
 	}
+
 	.style1 {
 		color: ${theme.bodyFont1};
 	}
+
 	.style2 {
 		color: ${theme.bodyFont2};
 	}
+
 	.style3 {
 		color: ${theme.bodyFont2.darken(0.75)};
 		background: ${theme.bodyFont1};
 	}
+
 	.style4 {
 		color: ${theme.bodyFont3};
 	}
+
 	.style5 {
 		color: ${theme.bodyFont4};
 	}
+
 	.style6 {
 		color: ${theme.bodyFont5};
 	}
+
 	.style7 {
 		background: ${theme.easterEgg};
 		background-size: 1800% 1800%;
@@ -52,13 +61,13 @@ const Wrapper = styled(SimpleBarReact)`
 
 		@keyframes rainbow {
 			0% {
-				background-position: 0% 82%;
+				background-position: 0 82%;
 			}
 			50% {
 				background-position: 100% 19%;
 			}
 			100% {
-				background-position: 0% 82%;
+				background-position: 0 82%;
 			}
 		}
 		color: ${theme.bodyFont4};

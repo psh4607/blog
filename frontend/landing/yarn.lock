@@ -10169,10 +10169,10 @@ v8-to-istanbul@^8.1.0:
     convert-source-map "^1.6.0"
     source-map "^0.7.3"
 
-v86@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/v86/-/v86-0.3.7.tgz#5139448625a953b2193a02c37a32f83b8397ea02"
-  integrity sha512-f+zIINRY3cO2orntDJ+Gvts6vThb3rj1uwzh1KgQKge7krrb79vJCjH0S7RKrKQBvXeqAh2vV34BK3znUoFE3Q==
+v86@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/v86/-/v86-0.4.0.tgz#58be25e0c6685675e50dcf3983635753659cd263"
+  integrity sha512-e4eOKJCiESxDn7CsVjmwdouUB05vSM+8JcNVZDVInLgXljY0siok6xJ1uX6wcoRhypzk56lOWOMwNk47w3QX0Q==
 
 value-equal@^1.0.1:
   version "1.0.1"

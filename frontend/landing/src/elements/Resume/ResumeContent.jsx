@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 
 import styled from 'styled-components';
@@ -14,7 +12,7 @@ const Iframe = styled.iframe`
 	border: none;
 `;
 
-const ResumeContent = ({ title, content }) => {
+const ResumeContent = () => {
 	return (
 		<BodyContent>
 			<Iframe src={MyResume} frameBorder='0' title='VsCode'></Iframe>

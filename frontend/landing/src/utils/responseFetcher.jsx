@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import styled from 'styled-components';
 
@@ -121,13 +121,14 @@ const parseResponse = (command, { data }) => {
 
 const getResponse = data => {
 	let commandWithArgs = data.split(' ');
-	if (commands.hasOwnProperty(commandWithArgs[0])) {
+	if (Object.prototype.hasOwnProperty.call(commands, commandWithArgs[0])) {
 		let arg = '';
 		let originalArg = '';
 		if (commandWithArgs.length === 1) {
 			arg = '_dir';
 		} else if (
-			commands[commandWithArgs[0]].validArgs.hasOwnProperty(
+			Object.prototype.hasOwnProperty.call(
+				commands[commandWithArgs[0]].validArgs,
 				commandWithArgs[1],
 			)
 		) {

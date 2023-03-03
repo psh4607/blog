@@ -10,7 +10,7 @@ const Arch = () => {
 	useEffect(() => {
 		async function main() {
 			new V86Starter({
-				wasm_fn: async (param: any) => {
+				wasm_fn: async param => {
 					return (await WebAssembly.instantiate(await v86WASM, param))
 						.instance.exports;
 				},

@@ -116,12 +116,12 @@ const AlertContent = ({ type }) => {
 		switch (type) {
 			case 'hideHelp':
 				setTextContent(
-					'Type help to get started & act like you\'re in a terminal!',
+					'터미널에 help 명령어를 입력하면 도움말을 볼 수 있습니다.',
 				);
 				break;
 			case 'qemu':
 				setTextContent(
-					"This page is still under development! You might experience visual glitches, ROM issues, etc. On top of that, since it downloads a 16.8 mb OS image, it might take a while to work properly. In such circumstances, try refreshing the page. If you're still having issues, please open an issue on GitHub.",
+					`This page is still under development! You might experience visual glitches, ROM issues, etc. On top of that, since it downloads a 16.8 mb OS image, it might take a while to work properly. In such circumstances, try refreshing the page. If you're still having issues, please open an issue on GitHub.`,
 				);
 				break;
 			default:

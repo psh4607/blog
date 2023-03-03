@@ -1,7 +1,7 @@
 export const reducer = (state, action) => {
+	let commands = state.commands;
 	switch (action.type) {
 		case 'SET':
-			let commands = state.commands;
 			commands.push(action.payload);
 			return {
 				...state,

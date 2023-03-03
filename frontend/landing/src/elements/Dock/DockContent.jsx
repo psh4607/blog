@@ -10,7 +10,6 @@ import GithubIcon from '@static/github.png';
 import twitterIcon from '@static/twitterIcon.png';
 import FolderIcon from '@static/folder.png';
 import LinkedInIcon from '@static/LinkedInIcon.png';
-import NothingIcon from '@static/NothingIcon.png';
 import DevopsIcon from '@static/DevopsIcon.png';
 import mIcon from '@static/mIcon.jpg';
 // import MyResume from "../Resume/resume/MyResume.pdf"

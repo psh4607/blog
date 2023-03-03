@@ -129,7 +129,7 @@ let commandList = [
 		action: true,
 		response: '',
 		subPathStrict: [true, { name: '.', response: '' }],
-		description: "opens a VS code window for this website's source code",
+		description: `opens a VS code window for this website's source code`,
 	},
 	{
 		name: ['happiness'],
@@ -192,7 +192,6 @@ const fileList = [
 const getCommandList = commandList => {
 	let finalCommandList = {};
 	commandList.forEach(item => {
-		//eslint-disable-next-line
 		let commandBuilder = {};
 		item.name.forEach(elem => {
 			let action = item.action
