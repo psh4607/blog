@@ -16,7 +16,6 @@ function createWebpackAliases(aliases) {
 	for (const name in aliases) {
 		result[name] = path.join(cwd, aliases[name]);
 	}
-	console.log(result);
 	return result;
 }
 

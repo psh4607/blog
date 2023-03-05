@@ -5,7 +5,8 @@
       "@babel/plugin-transform-runtime",
       {
         "corejs": 3
-      }
+      },
+        "babel-plugin-styled-components"
     ]
   ]
 }

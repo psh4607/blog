@@ -11,7 +11,7 @@ const Resume = () => {
 		<Default
 			height='90%'
 			heading='Resume'
-			resizable={false}
+			resizable={true}
 			programName='Resume'
 		>
 			<Suspense fallback={<Loader />}>
