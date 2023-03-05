@@ -13,7 +13,7 @@ const Projects = () => {
 		<Default
 			height='90%'
 			heading='Projects'
-			resizable={false}
+			resizable={true}
 			programName='Projects'
 		>
 			<Suspense fallback={<Loader />}>

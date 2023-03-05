@@ -11,7 +11,7 @@ const VSCode = () => {
 		<Default
 			height='90%'
 			heading='Visual Studio Code'
-			resizable={false}
+			resizable={true}
 			programName='Code'
 		>
 			<Suspense fallback={<Loader />}>

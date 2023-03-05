@@ -55,7 +55,7 @@ const Container = styled.div`
 const Default = props => {
 	const { pathname } = useLocation();
 	let resizable = false;
-	if (props.resizable === undefined) {
+	if (props.resizable === undefined || props.resizable) {
 		resizable = true;
 	}
 	const BOUND = 512;

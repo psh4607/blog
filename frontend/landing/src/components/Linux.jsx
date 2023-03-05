@@ -11,7 +11,7 @@ const Resume = () => {
 		<Default
 			heading='qemu'
 			contextMenu={true}
-			resizable={false}
+			resizable={true}
 			programName='Qemu'
 		>
 			<Suspense fallback={<Loader />}>
