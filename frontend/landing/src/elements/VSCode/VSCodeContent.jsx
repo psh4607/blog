@@ -13,7 +13,7 @@ const VSCodeContent = () => {
 	return (
 		<BodyContent>
 			<Iframe
-				src='https://github1s.com/adityassharma-ss/aditya/blob/master/src/components/VSCode.jsx'
+				src='https://github1s.com/psh4607/blog/blob/develop/frontend/landing/src/components/VSCode.jsx'
 				frameBorder='0'
 				title='VsCode'
 			></Iframe>
