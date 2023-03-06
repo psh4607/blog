@@ -1,6 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line
-import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Window from '@components/Window';
@@ -10,6 +8,7 @@ import Resume from '@components/Resume';
 import Git from '@components/Git';
 import Projects from '@components/Projects';
 import Linkedin from '@components/Linkedin';
+import Safari from '@components/Safari';
 
 const Routes = () => {
 	return (
@@ -21,6 +20,7 @@ const Routes = () => {
 				<Route path='/resume' exact component={Resume} />
 				<Route path='/git' exact component={Git} />
 				<Route path='/linkedin' exact component={Linkedin} />
+				<Route path='/safari' exact component={Safari} />
 				<Route path='/projects' exact component={Projects} />
 			</Switch>
 		</Router>

@@ -5,14 +5,14 @@ import '@styles/dock.scss';
 import { Link } from 'react-router-dom';
 
 import FinderIcon from '@static/finder.png';
-import ItermIcon from '@static/iterm.png';
+import ItermIcon from '@static/iterm2.png';
 import CodeIcon from '@static/code.png';
 import GithubIcon from '@static/github.png';
-import twitterIcon from '@static/twitterIcon.png';
 import FolderIcon from '@static/folder.png';
 import LinkedInIcon from '@static/LinkedInIcon.png';
 import DevopsIcon from '@static/DevopsIcon.png';
 import mIcon from '@static/mIcon.jpg';
+import SafariIcon from '@static/safari.png';
 // import MyResume from "../Resume/resume/MyResume.pdf"
 
 const DockContent = () => {
@@ -32,6 +32,18 @@ const DockContent = () => {
 										src={FinderIcon}
 										className='img-fluid'
 										alt='mac'
+									/>
+								</li>
+							</Link>
+							<Link to={'/safari'}>
+								<li
+									data-title='Safari'
+									className={'full-width-icon'}
+								>
+									<img
+										src={SafariIcon}
+										className='img-fluid'
+										alt='Safari'
 									/>
 								</li>
 							</Link>
@@ -65,15 +77,6 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<a href='https://twitter.com/aadityatwt'>
-								<li data-title='Twitter'>
-									<img
-										src={twitterIcon}
-										className='img-fluid'
-										alt='twitter'
-									/>
-								</li>
-							</a>
 							<Link to={'/linkedin'}>
 								<li data-title='LinkedIn'>
 									<img

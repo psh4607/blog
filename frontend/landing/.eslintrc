@@ -29,7 +29,6 @@
           ["@static", "./src/static"],
           ["@pages", "./src/pages"],
           ["@utils", "./src/utils"],
-          ["@/src", "./src"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx",".scss"]
       }
@@ -42,7 +41,7 @@
     "vars-on-top": "error",
     "block-scoped-var": "error",
     "quotes": [
-      "error",
+      "warn",
       "single",
       {
         "allowTemplateLiterals": true
