@@ -15,5 +15,4 @@ module.exports = createWebpackAliases({
 	'@utils': 'src/utils',
 	'@static': 'src/static',
 	'@pages': 'src/pages',
-	'@': 'src',
 });

@@ -5,13 +5,14 @@ import '@styles/dock.scss';
 import { Link } from 'react-router-dom';
 
 import FinderIcon from '@static/finder.png';
+import ItermIcon from '@static/iterm2.png';
 import CodeIcon from '@static/code.png';
 import GithubIcon from '@static/github.png';
-import twitterIcon from '@static/twitterIcon.png';
 import FolderIcon from '@static/folder.png';
 import LinkedInIcon from '@static/LinkedInIcon.png';
 import DevopsIcon from '@static/DevopsIcon.png';
 import mIcon from '@static/mIcon.jpg';
+import SafariIcon from '@static/safari.png';
 // import MyResume from "../Resume/resume/MyResume.pdf"
 
 const DockContent = () => {
@@ -34,12 +35,36 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
+							<Link to={'/safari'}>
+								<li
+									data-title='Safari'
+									className={'full-width-icon'}
+								>
+									<img
+										src={SafariIcon}
+										className='img-fluid'
+										alt='Safari'
+									/>
+								</li>
+							</Link>
+							<Link to='/'>
+								<li
+									data-title='iTerm'
+									className='full-width-icon'
+								>
+									<img
+										src={ItermIcon}
+										className='img-fluid'
+										alt='iterm'
+									/>
+								</li>
+							</Link>
 							<Link to='/vscode'>
 								<li data-title='VS Code'>
 									<img
 										src={CodeIcon}
 										className='img-fluid'
-										alt='mac'
+										alt='vscode'
 									/>
 								</li>
 							</Link>
@@ -48,25 +73,25 @@ const DockContent = () => {
 									<img
 										src={GithubIcon}
 										className='img-fluid'
-										alt='mac'
+										alt='github'
 									/>
 								</li>
 							</Link>
-							<a href='https://twitter.com/aadityatwt'>
-								<li data-title='Twitter'>
-									<img
-										src={twitterIcon}
-										className='img-fluid'
-										alt='mac'
-									/>
-								</li>
-							</a>
-							<a href='https://www.linkedin.com/in/aditya-sharma-47b787201'>
+							<Link to={'/linkedin'}>
 								<li data-title='LinkedIn'>
 									<img
 										src={LinkedInIcon}
 										className='img-fluid'
-										alt='dope'
+										alt='linkedin'
+									/>
+								</li>
+							</Link>
+							<a href='https://kr.linkedin.com/in/seongho-park-psh44034607?trk=profile-badge'>
+								<li data-title='LinkedIn'>
+									<img
+										src={LinkedInIcon}
+										className='img-fluid'
+										alt='linkedin'
 									/>
 								</li>
 							</a>
@@ -82,18 +107,20 @@ const DockContent = () => {
 									/>
 								</li>
 							</a>
-							{/* <a href="https://thisdoesnothing.vercel.app/" target="_blank">
-								<li data-title="This Does Nothing">
-									<img
-										src
-										={NothingIcon}
-										className="img-fluid"
-										alt="mac"
-									/>
-								</li>
-							</a> */}
+							{/*<a*/}
+							{/*	href='https://thisdoesnothing.vercel.app/'*/}
+							{/*	target='_blank'*/}
+							{/*>*/}
+							{/*	<li data-title='This Does Nothing'>*/}
+							{/*		<img*/}
+							{/*			src={NothingIcon}*/}
+							{/*			className='img-fluid'*/}
+							{/*			alt='mac'*/}
+							{/*		/>*/}
+							{/*	</li>*/}
+							{/*</a>*/}
 							<a
-								href='https://github.com/adityassharma-ss/DevOps'
+								href='https://github.com/psh4607'
 								target='_blank'
 							>
 								<li data-title='My DevOps Portal'>
