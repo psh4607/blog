@@ -4,21 +4,21 @@ import Default from './Default';
 
 import Loader from '@elements/Loader/Loader';
 
-const VSCodeContent = lazy(() => import('@elements/VSCode/VSCodeContent'));
+const GitContent = lazy(() => import('@elements/Linkedin/LinkedinContent'));
 
-const VSCode = () => {
+const Linkedin = () => {
 	return (
 		<Default
-			height='90%'
-			heading='Visual Studio Code'
+			heading='Linkedin : seongho.park'
+			contextMenu={true}
 			resizable={true}
-			programName='Code'
+			programName='Git Log'
 		>
 			<Suspense fallback={<Loader />}>
-				<VSCodeContent />
+				<GitContent />
 			</Suspense>
 		</Default>
 	);
 };
 
-export default VSCode;
+export default Linkedin;

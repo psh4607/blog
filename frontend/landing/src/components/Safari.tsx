@@ -1,24 +1,25 @@
 import React, { Suspense, lazy } from 'react';
+// import BrowserLikeWindow from 'electron-as-browser';
 
 import Default from './Default';
 
 import Loader from '@elements/Loader/Loader';
 
-const LinuxContent = lazy(() => import('@elements/Linux/LinuxContent'));
+const SafariContent = lazy(() => import('@elements/Safari/SafariContent'));
 
-const Resume = () => {
+const Safari = () => {
 	return (
 		<Default
-			heading='qemu'
+			heading='Linkedin : seongho.park'
 			contextMenu={true}
 			resizable={true}
-			programName='Qemu'
+			programName='Git Log'
 		>
 			<Suspense fallback={<Loader />}>
-				<LinuxContent />
+				<SafariContent />
 			</Suspense>
 		</Default>
 	);
 };
 
-export default Resume;
+export default Safari;

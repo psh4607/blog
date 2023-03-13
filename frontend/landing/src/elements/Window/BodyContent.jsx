@@ -1,6 +1,7 @@
 import React from 'react';
-// eslint-disable-next-line
-import styled from "styled-components";
+
+import styled from 'styled-components';
+
 import theme from '@styles/theme';
 
 const Wrapper = styled.div`

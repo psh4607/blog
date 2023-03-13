@@ -6,12 +6,12 @@ import Loader from '@elements/Loader/Loader';
 
 const GitContent = lazy(() => import('@elements/Git/GitContent'));
 
-const Resume = () => {
+const Git = () => {
 	return (
 		<Default
 			heading='git log'
 			contextMenu={true}
-			resizable={false}
+			resizable={true}
 			programName='Git Log'
 		>
 			<Suspense fallback={<Loader />}>
@@ -21,4 +21,4 @@ const Resume = () => {
 	);
 };
 
-export default Resume;
+export default Git;
