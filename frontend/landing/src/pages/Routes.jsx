@@ -9,12 +9,14 @@ import Git from '@components/Git';
 import Projects from '@components/Projects';
 import Linkedin from '@components/Linkedin';
 import Safari from '@components/Safari';
+import Main from '@components/Main';
 
 const Routes = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route path='/' exact component={Window} />
+				<Route path='/' exact component={Main} />
+				<Route path='/terminal' exact component={Window} />
 				<Route path='/danger-zone' exact component={Danger} />
 				<Route path='/vscode' exact component={VSCode} />
 				<Route path='/resume' exact component={Resume} />

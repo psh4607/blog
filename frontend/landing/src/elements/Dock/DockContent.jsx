@@ -25,7 +25,7 @@ const DockContent = () => {
 						<ul>
 							<Link to='/'>
 								<li
-									data-title='Home'
+									data-title='Finder'
 									className='full-width-icon'
 								>
 									<img
@@ -47,7 +47,7 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<Link to='/'>
+							<Link to='/terminal'>
 								<li
 									data-title='iTerm'
 									className='full-width-icon'
