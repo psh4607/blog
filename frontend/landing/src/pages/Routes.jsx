@@ -10,6 +10,7 @@ import Projects from '@components/Projects';
 import Linkedin from '@components/Linkedin';
 import Safari from '@components/Safari';
 import Main from '@components/Main';
+import Notion from '@components/Notion';
 
 const Routes = () => {
 	return (
@@ -24,6 +25,7 @@ const Routes = () => {
 				<Route path='/linkedin' exact component={Linkedin} />
 				<Route path='/safari' exact component={Safari} />
 				<Route path='/projects' exact component={Projects} />
+				<Route path='/notion' exact component={Notion} />
 			</Switch>
 		</Router>
 	);

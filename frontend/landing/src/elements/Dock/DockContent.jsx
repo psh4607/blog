@@ -10,10 +10,10 @@ import CodeIcon from '@static/code.png';
 import GithubIcon from '@static/github.png';
 import FolderIcon from '@static/folder.png';
 import LinkedInIcon from '@static/LinkedInIcon.png';
+import NotionIcon from '@static/notion.png';
 import DevopsIcon from '@static/DevopsIcon.png';
 import mIcon from '@static/mIcon.jpg';
 import SafariIcon from '@static/safari.png';
-// import MyResume from "../Resume/resume/MyResume.pdf"
 
 const DockContent = () => {
 	return (
@@ -77,10 +77,13 @@ const DockContent = () => {
 									/>
 								</li>
 							</Link>
-							<Link to={'/linkedin'}>
-								<li data-title='LinkedIn'>
+							<Link to={'/notion'}>
+								<li
+									data-title='Notion'
+									className='full-width-icon'
+								>
 									<img
-										src={LinkedInIcon}
+										src={NotionIcon}
 										className='img-fluid'
 										alt='linkedin'
 									/>
