@@ -8,7 +8,7 @@ const TerminalContent = lazy(() =>
 	import('@elements/Terminal/TerminalContent'),
 );
 
-const VSCode = () => {
+const Terminal = () => {
 	return (
 		<Default
 			contextMenu={true}
@@ -23,4 +23,4 @@ const VSCode = () => {
 	);
 };
 
-export default VSCode;
+export default Terminal;
